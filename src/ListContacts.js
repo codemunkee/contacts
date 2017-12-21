@@ -25,7 +25,7 @@ class ListContacts extends Component {
 
     let showingContacts;
     if (query) {
-      const match = new RegExp(escapeRegExp(query, 'i'));
+      const match = new RegExp(escapeRegExp(query), 'i');
       showingContacts = contacts.filter((c) => match.test(c.name));
     } else {
       showingContacts = contacts;
