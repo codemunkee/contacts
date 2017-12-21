@@ -1,9 +1,7 @@
 import React, { Component } from 'react';
 import ListContacts from './ListContacts'
 
-
 class App extends Component {
-
   state = {
     contacts: [
       {
@@ -25,14 +23,12 @@ class App extends Component {
         "avatarURL": "http://localhost:5001/tyler.jpg"
       }
     ]
-  };
-
+  }
   removeContact = (contact) => {
     this.setState((state) => ({
-      contacts: this.state.contacts.filter(c => c.id !== contact.id)
+      contacts: state.contacts.filter((c) => c.id !== contact.id)
     }))
-  };
-
+  }
   render() {
     return (
       <div>
